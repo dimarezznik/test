@@ -1,0 +1,99 @@
+.modal{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(1);
+}
+
+.modal_non_active{
+    transform: scale(0);
+}
+
+.modal_content{
+    padding: 20px;  
+    background-color: white;
+    display: flex;
+    gap: 15px;
+}
+
+.modal_content .span{
+    position: relative;
+    margin-right: 10px;
+}
+
+.col{
+    display: block;
+}
+
+.form{
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.form input{
+    padding: 8px;
+    margin-bottom: 20px;
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+.form button{
+    border: 1px solid #4997D0;
+    padding: 8px;
+    color: white;
+    background: #4997D0;
+    border-radius: 3px;
+}
+
+.comments{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.comment{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.comment p{
+    font-size: 13px;
+    line-height: 15px;
+    color: #999999;
+}
+
+.comment span{
+font-size: 13px;
+line-height: 15px;
+color: #000000;
+}
+
+.modal_content .span:before{
+    transform: rotate(45deg);
+    position: absolute;
+    content: '';
+    width: 30px;
+    height: 2px;
+    background-color: black;
+    top: 0px;
+}
+
+.modal_content .span:after{
+    transform: rotate(-45deg);
+    position: absolute;
+    content: '';
+    width: 30px;
+    height: 2px;
+    background-color: black;
+    top: 0px;
+}

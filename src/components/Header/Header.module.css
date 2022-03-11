@@ -1,0 +1,13 @@
+.header{
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+.header h1{
+    color: #000000;
+    font-weight: 400;
+font-size: 36px;
+line-height: 42.19px;
+text-transform: uppercase;
+}
