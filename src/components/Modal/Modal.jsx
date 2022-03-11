@@ -1,11 +1,12 @@
 import React from "react";
 import s from './Modal.module.css';
-import Rectangle6 from '../assets/Rectangle6.png';
+import Rectangle6 from '../../assets/Rectangle6.png';
 
 const Modal = ({active, setActive}) => {
     return(
-        <div className={active ? s.modal : s.modal_non_active} onClick={() => setActive(false)}>
-            <div className={s.modal_content} onClick={e => e.stopPropagation()}>
+        <div className={active ? s.modal : s.modal_non_active}>
+            <div className={s.modal_main}>
+            <div className={s.modal_content}>
                 <div className={s.col}>
                     <div className={s.image}>
                         <img src={Rectangle6} alt="image"/>
@@ -26,7 +27,10 @@ const Modal = ({active, setActive}) => {
                     <span>Я тут был, очень понравилось</span>
                 </div>
                 </div>
+                </div>
+                <div className={s.close} onClick={() => setActive(false)}>
                 <span className={s.span}></span>
+                </div>  
             </div>
         </div>
     );

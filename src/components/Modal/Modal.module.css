@@ -15,19 +15,32 @@
     transform: scale(0);
 }
 
+.modal_main{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
 .modal_content{
-    padding: 20px;  
     background-color: white;
     display: flex;
     gap: 15px;
 }
 
-.modal_content .span{
+.close{
     position: relative;
-    margin-right: 10px;
+    height: 30px;
+    width: 30px;
+    right: 30px;
+}
+
+.span{
+    position: absolute;
+    top: 15px;
 }
 
 .col{
+    padding: 20px;
     display: block;
 }
 
@@ -55,6 +68,7 @@
 }
 
 .comments{
+    padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -78,7 +92,7 @@ line-height: 15px;
 color: #000000;
 }
 
-.modal_content .span:before{
+.span:before{
     transform: rotate(45deg);
     position: absolute;
     content: '';
@@ -88,7 +102,7 @@ color: #000000;
     top: 0px;
 }
 
-.modal_content .span:after{
+.span:after{
     transform: rotate(-45deg);
     position: absolute;
     content: '';
@@ -96,4 +110,21 @@ color: #000000;
     height: 2px;
     background-color: black;
     top: 0px;
+}
+
+@media(max-width: 576px){
+    .modal_main{
+    max-width: 290px;
+    }
+
+    .modal_content{
+        flex-direction: column;
+    }
+    .close{
+        position: relative;
+        top: 0;
+    }
+    .col{
+        padding: 30px;
+    }
 }
