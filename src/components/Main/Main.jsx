@@ -13,7 +13,7 @@ const Main = ({setActive}) => {
     const images = 'https://boiling-refuge-66454.herokuapp.com/images';
 
   useEffect(() => {
-    function getImages(method, url, body = null){
+    function getImages(method, url){
         return fetch(url).then(response => {
             const data = response.json()
             
